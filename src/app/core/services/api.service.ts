@@ -7,20 +7,19 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
+  apiUrl = 'https://api.jsonbin.io/b/60d0bc468a4cd025b7a271b9'
 
   constructor(private httpClient: HttpClient) { }
 
 
   getChampions() {
     return this.httpClient
-    .get()
+    .get(this.apiUrl)
+    .pipe(
+      map((body: any) => body),
+      catchError((err) =>
+      of('Champions could not be loaded')
+      )
+    );
   }
-
-
-
-
-
-
-
-
 }
