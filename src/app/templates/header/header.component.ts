@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs/operators';
-import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -11,17 +9,7 @@ export class HeaderComponent implements OnInit {
 
   champions: any;
 
-  constructor(private apiService: ApiService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.apiService
-     .getChampions()
-      .pipe(finalize(() => {
-      }))
-      .subscribe((champions) => {
-        console.log(champions);
-        this.champions = champions;
-      })
-    
-    };
-  }
+  ngOnInit(): void {};
+}
