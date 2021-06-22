@@ -1,0 +1,30 @@
+.gameCard {
+    background-image: url('./../../../assets/images/Champions-Card-Backround.jpeg');
+    color: #fff;
+    border-radius: 30px;
+}
+
+.gameCardHeaderImg img {
+    width: 6rem;
+}
+
+.gameCardHeaderTitle {
+    font-family: 'Chelsea Market', cursive;
+}
+
+.gameCardBodyTagsSingle {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 0px 5px;
+    margin-right: 5px;
+    color: #000;
+    font-family: "Chelsea Market", cursive;
+    font-size: 16.5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.gameCardBodyTagsSingle:last-child {
+    margin-right: 0;
+}
+

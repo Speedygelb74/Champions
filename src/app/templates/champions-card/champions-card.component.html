@@ -1,1 +1,30 @@
-{{ champion.name }}
+<div class="gameCard mb-4">
+    <div class="gameCardInner p-4">
+        <div class="gameCardHeader mb-3 d-flex">
+            <div class="gameCardHeaderImg me-3 align-items-start">
+                <img src="{{ champion.icon }}">
+            </div>
+            <div class="gameCardHeaderTitle" >         
+                <h3>{{ champion.name }}</h3>
+                {{ champion.title }}
+            </div>
+        </div>
+        <div class="gameCardBody">
+            <div class="gameCardBodyTags">
+                <span class="gameCardBodyTagsSingle" *ngFor="let tag of champion.tags">
+                    {{ tag }} 
+                </span> 
+            </div>
+            <div class="gameCardBodyStats">
+                Health {{ champion.stats.hp }}   <br>
+                Movementspeed {{ champion.stats.movespeed }}<br>
+                Armor {{ champion.stats.armor }}<br>
+                Attackrange {{ champion.stats.attackrange }}<br>
+                Attackdamage {{ champion.stats.attackdamage }}<br>
+                Attackspeed {{ champion.stats.attackspeed }}
+            </div>
+        </div>
+    </div>
+</div>
+
+
