@@ -10,6 +10,7 @@ export interface Champion {
     icon:string;
     sprite:Sprite;
     description:string;
+    tags: any;
 }
 
 
