@@ -16,12 +16,34 @@
                 </span> 
             </div>
             <div class="gameCardBodyStats">
-                Health {{ champion.stats.hp }}   <br>
-                Movementspeed {{ champion.stats.movespeed }}<br>
-                Armor {{ champion.stats.armor }}<br>
-                Attackrange {{ champion.stats.attackrange }}<br>
-                Attackdamage {{ champion.stats.attackdamage }}<br>
-                Attackspeed {{ champion.stats.attackspeed }}
+                <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>HP</td>
+                        <td>{{ champion.stats.hp }}</td>
+                      </tr>
+                      <tr>
+                        <td>Movementspeed</td>
+                        <td>{{ champion.stats.movespeed }}</td>
+                      </tr>
+                      <tr>
+                        <td>Armor</td>
+                        <td>{{ champion.stats.armor }}</td>
+                      </tr>
+                      <tr>
+                        <td>Attackrange</td>
+                        <td>{{ champion.stats.attackrange }}</td>
+                      </tr>
+                      <tr>
+                        <td>Attackdamage</td>
+                        <td>{{ champion.stats.attackdamage }}</td>
+                      </tr>
+                      <tr>
+                        <td>Attackspeed</td>
+                        <td>{{ champion.stats.attackspeed }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
     </div>
