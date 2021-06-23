@@ -2,14 +2,11 @@
     background-image: url('./../../../assets/images/Champions-Card-Backround.jpeg');
     color: #fff;
     border-radius: 30px;
+    font-family: 'Chelsea Market', cursive;
 }
 
 .gameCardHeaderImg img {
     width: 6rem;
-}
-
-.gameCardHeaderTitle {
-    font-family: 'Chelsea Market', cursive;
 }
 
 .gameCardBodyTagsSingle {
@@ -28,3 +25,30 @@
     margin-right: 0;
 }
 
+.table.table-bordered {
+    color: #fff
+    ;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: rgba(255,255,255,0.3);
+    margin-top: 1.5rem;
+  }
+  table td, table th {
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  table tr:first-child th {
+    border-top: 0;
+  }
+  table tr:last-child td {
+    border-bottom: 0;
+  }
+  table tr td:first-child,
+  table tr th:first-child {
+    border-left: 0;
+  }
+  table tr td:last-child,
+  table tr th:last-child {
+    border-right: 0;
+  }
