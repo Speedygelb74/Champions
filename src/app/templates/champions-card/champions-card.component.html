@@ -1,4 +1,4 @@
-<div class="gameCard mb-4">
+<div class="gameCard mb-4 m-xl-3" [class.flipped]="isFlipped == true" (click)="flipCard()">
     <div class="gameCardFront">
         <div class="gameCardInner p-4">
             <div class="gameCardHeader mb-3 d-flex">
@@ -50,7 +50,6 @@
         </div>
     </div>
     <div class="gameCardBack">
-        <div class="gameCardFront">
             <div class="gameCardInner p-4">
                 <div class="gameCardHeader mb-3 d-flex">
                     <div class="gameCardHeaderImg me-3 align-items-start">
@@ -62,17 +61,11 @@
                     </div>
                 </div>
                 <div class="gameCardBody">
-                    <div class="gameCardBodyTags">
-                        <span class="gameCardBodyTagsSingle" *ngFor="let tag of champion.tags">
-                            {{ tag }} 
-                        </span> 
-                    </div>
                     <div class="gameCardBodyDescription">
                         {{ champion.description }}
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 
