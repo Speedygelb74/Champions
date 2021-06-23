@@ -15,7 +15,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent,
     ChampionsGalleryComponent,
     ChampionsCardComponent,
     LoaderComponent
