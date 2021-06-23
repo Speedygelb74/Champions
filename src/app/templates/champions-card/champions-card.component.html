@@ -1,49 +1,76 @@
 <div class="gameCard mb-4">
-    <div class="gameCardInner p-4">
-        <div class="gameCardHeader mb-3 d-flex">
-            <div class="gameCardHeaderImg me-3 align-items-start">
-                <img src="{{ champion.icon }}">
+    <div class="gameCardFront">
+        <div class="gameCardInner p-4">
+            <div class="gameCardHeader mb-3 d-flex">
+                <div class="gameCardHeaderImg me-3 align-items-start">
+                    <img src="{{ champion.icon }}">
+                </div>
+                <div class="gameCardHeaderTitle" >         
+                    <h3>{{ champion.name }}</h3>
+                    {{ champion.title }}
+                </div>
             </div>
-            <div class="gameCardHeaderTitle" >         
-                <h3>{{ champion.name }}</h3>
-                {{ champion.title }}
+            <div class="gameCardBody">
+                <div class="gameCardBodyTags">
+                    <span class="gameCardBodyTagsSingle" *ngFor="let tag of champion.tags">
+                        {{ tag }} 
+                    </span> 
+                </div>
+                <div class="gameCardBodyStats">
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <td>HP</td>
+                            <td>{{ champion.stats.hp }}</td>
+                        </tr>
+                        <tr>
+                            <td>Movementspeed</td>
+                            <td>{{ champion.stats.movespeed }}</td>
+                        </tr>
+                        <tr>
+                            <td>Armor</td>
+                            <td>{{ champion.stats.armor }}</td>
+                        </tr>
+                        <tr>
+                            <td>Attackrange</td>
+                            <td>{{ champion.stats.attackrange }}</td>
+                        </tr>
+                        <tr>
+                            <td>Attackdamage</td>
+                            <td>{{ champion.stats.attackdamage }}</td>
+                        </tr>
+                        <tr>
+                            <td>Attackspeed</td>
+                            <td>{{ champion.stats.attackspeed }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <div class="gameCardBody">
-            <div class="gameCardBodyTags">
-                <span class="gameCardBodyTagsSingle" *ngFor="let tag of champion.tags">
-                    {{ tag }} 
-                </span> 
-            </div>
-            <div class="gameCardBodyStats">
-                <table class="table table-bordered">
-                    <tbody>
-                      <tr>
-                        <td>HP</td>
-                        <td>{{ champion.stats.hp }}</td>
-                      </tr>
-                      <tr>
-                        <td>Movementspeed</td>
-                        <td>{{ champion.stats.movespeed }}</td>
-                      </tr>
-                      <tr>
-                        <td>Armor</td>
-                        <td>{{ champion.stats.armor }}</td>
-                      </tr>
-                      <tr>
-                        <td>Attackrange</td>
-                        <td>{{ champion.stats.attackrange }}</td>
-                      </tr>
-                      <tr>
-                        <td>Attackdamage</td>
-                        <td>{{ champion.stats.attackdamage }}</td>
-                      </tr>
-                      <tr>
-                        <td>Attackspeed</td>
-                        <td>{{ champion.stats.attackspeed }}</td>
-                      </tr>
-                    </tbody>
-                  </table>
+    </div>
+    <div class="gameCardBack">
+        <div class="gameCardFront">
+            <div class="gameCardInner p-4">
+                <div class="gameCardHeader mb-3 d-flex">
+                    <div class="gameCardHeaderImg me-3 align-items-start">
+                        <img src="{{ champion.icon }}">
+                    </div>
+                    <div class="gameCardHeaderTitle" >         
+                        <h3>{{ champion.name }}</h3>
+                        {{ champion.title }}
+                    </div>
+                </div>
+                <div class="gameCardBody">
+                    <div class="gameCardBodyTags">
+                        <span class="gameCardBodyTagsSingle" *ngFor="let tag of champion.tags">
+                            {{ tag }} 
+                        </span> 
+                    </div>
+                    <div class="gameCardBodyDescription">
+                        {{ champion.description }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
