@@ -7,7 +7,7 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  apiUrl = 'http://ddragon.leagueoflegends.com/cdn/11.13.1/data/en_US/'
+  apiUrl = 'https://ddragon.leagueoflegends.com/cdn/11.13.1/data/en_US/'
 
   constructor(private httpClient: HttpClient) { }
 
