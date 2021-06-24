@@ -23,7 +23,7 @@ export class ApiService {
     );
   }
 
-  getChampionsDetail(championName: string) {
+  getChampionsDetail(championName: { championId: string }) {
     return this.httpClient
     .get(this.apiUrl + 'champion' + championName + '.json')
     .pipe(

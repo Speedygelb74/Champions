@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { ApiService } from 'src/app/core/services/api.service';
-import { Champion } from '../../core/model/Champion'
+import { Champion } from '../../../core/model/Champion'
 
 @Component({
   selector: 'app-champions-gallery',
