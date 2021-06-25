@@ -1,1 +1,50 @@
-<p>champions-detail works!</p>
+<div *ngIf="isLoading">
+    <div class="container">
+        <div class="row">
+            <app-loader></app-loader>
+        </div>
+    </div>
+</div>
+
+<div class="championSingle" *ngIf="champion && !isLoading">
+    <div class="container my-5">
+        <div class="row p-4 py-5 pe-lg-0 align-items-center shadow-lg championBanner" style="background-size: cover;box-shadow: 0px 5px 30px rgba(0, 0, 0, 0, 9)important;" [ngStyle]="{ backgroundImage: backgroundImage }">
+            <div class="col-lg-7 p-3 p-lg-5 py-lg-3" style="color: #fff;">
+                <h1 class="display-4 fw-bold 1h-1 shadowtext mb-3">{{ champion.name }}</h1>
+                <p class="lead shadowtext">{{ champion.lore }}</p>
+                <div class="gameSingleStats">
+                    <table class="table table-bordered shadowtext">
+                        <tbody>
+                        <tr>
+                            <td>Health</td>
+                            <td>{{ champion.stats.hp }}</td>
+                        </tr>
+                        <tr>
+                            <td>Movementspeed</td>
+                            <td>{{ champion.stats.movespeed }}</td>
+                        </tr>
+                        <tr>
+                            <td>Armor</td>
+                            <td>{{ champion.stats.armor }}</td>
+                        </tr>
+                        <tr>
+                            <td>Attackrange</td>
+                            <td>{{ champion.stats.attackrange }}</td>
+                        </tr>
+                        <tr>
+                            <td>Attackdamage</td>
+                            <td>{{ champion.stats.attackdamage }}</td>
+                        </tr>
+                        <tr>
+                            <td>Attackspeed</td>
+                            <td>{{ champion.stats.attackspeed }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+</div>
