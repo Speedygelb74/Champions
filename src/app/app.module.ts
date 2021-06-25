@@ -12,6 +12,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { ScrollToTopComponent } from './templates/_shared/scroll-to-top/scroll-to-top.component';
 import { ChampionsComponent } from './templates/champions/champions.component';
+import { ChampionsDetailComponent } from './templates/champions-detail/champions-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChampionsComponent } from './templates/champions/champions.component';
     ChampionsCardComponent,
     LoaderComponent,
     ScrollToTopComponent,
-    ChampionsComponent
+    ChampionsComponent,
+    ChampionsDetailComponent
     
   ],
   imports: [
