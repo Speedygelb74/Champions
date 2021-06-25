@@ -15,6 +15,8 @@ export class ChampionsDetailComponent implements OnInit {
   champion: Champion;
   title: any;
   isLoading = false;
+  // @ts-ignore
+  backgroundImage: string;
   id: any;
 
   private sub: any;
@@ -43,13 +45,22 @@ export class ChampionsDetailComponent implements OnInit {
             })
           )
           .subscribe((champion) => {
-            this.champion = champion;
+            function flatten(obj: ArrayLike<unknown> | { [s: string]: unknown; }) {
+              // @ts-ignore
+              return Object.values(obj).flat()
+            }
+            const flatChampion = flatten(champion.data);
+            // @ts-ignore
+            this.champion = flatChampion['0'];
             this.setTitle({ title: this.champion.name });
+            this.getBackgroundImage()
           });
       }
     });
   }
-
+  getBackgroundImage() {
+    this.backgroundImage = "url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + this.champion.id + "_0.jpg)";
+  }
 
 }
 
