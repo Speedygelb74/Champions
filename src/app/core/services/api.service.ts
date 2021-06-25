@@ -25,7 +25,7 @@ export class ApiService {
 
   getChampionsDetail(championName: { championId: string }) {
     return this.httpClient
-    .get(this.apiUrl + 'champion' + championName + '.json')
+    .get(this.apiUrl + 'champion/' + championName + '.json')
     .pipe(
       map((body: any) => body),
       catchError((err) =>
